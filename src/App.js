@@ -2,7 +2,7 @@ import { UserInfoForm } from './UserInfoForm'
 
 function App() {
 	return (
-		<UserInfoForm/>
+		<UserInfoForm userId={'345'}/>
 	);
 }
 
