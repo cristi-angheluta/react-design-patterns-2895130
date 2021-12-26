@@ -1,12 +1,11 @@
-import { printProps } from './printProps';
-import { UserInfo } from './UserInfo';
-import { withUser } from './withUser';
+import { withEditableUser } from './withEditableUser'
+import { UserInfoForm } from './UserInfoForm'
 
-const UserInfoWithLoader = withUser(UserInfo, '234');
+const UserInfoWithEditor = withEditableUser(UserInfoForm, '345');
 
 function App() {
 	return (
-		<UserInfoWithLoader />
+		<UserInfoWithEditor />
 	);
 }
 
