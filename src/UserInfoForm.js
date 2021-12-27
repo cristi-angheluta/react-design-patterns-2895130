@@ -1,11 +1,11 @@
-import { withEditableUser } from './withEditableUser'
+import { withEditableResource } from './withEditableResource'
 /* defining an inline component
   (props) => {
     return <></>
   }
 */
 
-const userInfoForm = userId => withEditableUser(({user, onChangeUser, onResetUser, onSaveUser}) => {
+const userInfoForm = userId => withEditableResource(({user, onChangeUser, onResetUser, onSaveUser}) => {
   const {name, age, hairColor} = user || {}
   return user
     ?
@@ -27,7 +27,7 @@ const userInfoForm = userId => withEditableUser(({user, onChangeUser, onResetUse
     </form>
 
     : <p>Loading...</p>
-}, userId)
+}, `/users/${userId}`, 'user')
 
 export const UserInfoForm = ({userId}) => {
   const AnUserForm = userInfoForm(userId)
