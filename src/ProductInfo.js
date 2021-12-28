@@ -13,6 +13,6 @@ export const ProductInfo = ({ productId }) => {
 		<p>{description}</p>
 		<p>Average Rating: {rating}</p>
 		</>)
-			: <p1>Loading...</p1>
+			: <p>Loading...</p>
 	);
 }
